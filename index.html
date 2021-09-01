@@ -34,9 +34,9 @@
             </div>
         </div>
         <ul class="thumb">
-            <li><img src="img/thumb1.png"></li>
-            <li><img src="img/thumb2.png"></li>
-            <li><img src="img/thumb3.png"></li>
+            <li><img src="img/thumb1.png" onclick="imgSlider('img/img1.png'); changeCircleColor('#017143')"></li>
+            <li><img src="img/thumb2.png" onclick="imgSlider('img/img2.png'); changeCircleColor('#eb7495')"></li>
+            <li><img src="img/thumb3.png" onclick="imgSlider('img/img3.png'); changeCircleColor('#d752b1')"></li>
         </ul>
         <ul class="sci">
             <li><a href="#"><img src="img/facebook.png"></a></li>
@@ -44,5 +44,16 @@
             <li><a href="#"><img src="img/instagram.png"></a></li>
         </ul>   
     </section>
+
+    <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.starbucks').src = anything;
+    }
+
+    function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+    </script>
 </body>
 </html>
